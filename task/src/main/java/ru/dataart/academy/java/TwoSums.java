@@ -14,9 +14,9 @@ public class TwoSums {
      */
     public int[] getTwoSum(int[] nums, int target) {
         for (int i : nums) {
-            int dif = target - i;
-            if (IntStream.of(nums).anyMatch(x -> x == dif)) {
-                return new int[]{i, dif};
+            int diff = target - i;
+            if (IntStream.of(nums).anyMatch(x -> x == diff)) {
+                return new int[]{i, diff};
             }
         }
         return new int [0];
