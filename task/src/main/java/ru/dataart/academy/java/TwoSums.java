@@ -18,6 +18,7 @@ public class TwoSums {
             if (IntStream.of(nums).anyMatch(x -> x == diff)) {
                 return new int[]{i, diff};
             }
+            if(diff + i > target) return new int[0];
         }
         return new int [0];
     }
