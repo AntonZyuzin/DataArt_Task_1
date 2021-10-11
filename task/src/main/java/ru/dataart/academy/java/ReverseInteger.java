@@ -15,17 +15,17 @@ public class ReverseInteger {
 
         if (startNumber < 0) {
             startNumber *= -1;
-            return doReverse(startNumber) * -1;
         }
-        return doReverse(startNumber);
-    }
 
-    public int doReverse(int startNumber) {
         int reverseNumber = 0;
         while (startNumber > 0) {
             reverseNumber *= 10;
             reverseNumber += startNumber % 10;
             startNumber /= 10;
+        }
+
+        if (inputNumber < 0) {
+            return reverseNumber * -1;
         }
         return reverseNumber;
     }
